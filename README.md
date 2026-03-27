@@ -4,7 +4,7 @@
 
 Mindloop is a **front-end concept**: a dark, monochrome marketing site for a newsletter-style product—full-viewport hero video, “liquid glass” surfaces, scroll-driven typography, and secondary pages that share one typographic scale. I owned the UI structure, motion, routing, and responsive rhythm; there is **no backend or real subscriptions** (the live badge and copy state this clearly).
 
-**Live:** [add your GitHub Pages URL after first deploy](https://example.com)
+**Live:** [GitHub Pages](https://wilo101.github.io/mindloop/) — بعد تفعيل **Settings → Pages** على فرع `gh-pages` (ينشئها الـ workflow بعد أول نجاح على `main`).
 
 ---
 
