@@ -1,6 +1,6 @@
 # Mindloop
 
-![Hero screenshot](./screenshot.png)
+![Mindloop — معاينة الهيرو (GIF يتحرك تلقائياً)](./docs/hero.gif)
 
 Mindloop is a **front-end concept**: a dark, monochrome marketing site for a newsletter-style product—full-viewport hero video, “liquid glass” surfaces, scroll-driven typography, and secondary pages that share one typographic scale. I owned the UI structure, motion, routing, and responsive rhythm; there is **no backend or real subscriptions** (the live badge and copy state this clearly).
 
@@ -8,52 +8,39 @@ Mindloop is a **front-end concept**: a dark, monochrome marketing site for a new
 
 ---
 
-## Screen recordings / تسجيلات الشاشة
+## معاينة متحركة (GIF) — تشتغل لوحدها في README
 
-الملفات نفسها في المشروع تحت [`docs/videos/`](./docs/videos/) وعلى GitHub:  
-[github.com/wilo101/mindloop/tree/main/docs/videos](https://github.com/wilo101/mindloop/tree/main/docs/videos)
-
-مسجّلات قصيرة من الواجهة — لو المشغّل ما ظهرش في الصفحة، اضغط رابط **فتح الفيديو** تحت كل مقطع:
-
-### الهيرو — Hero
-
-<video src="https://raw.githubusercontent.com/wilo101/mindloop/main/docs/videos/hero.mp4" controls playsinline muted width="100%"></video>
-
-[فتح الفيديو في صفحة الملف](./docs/videos/hero.mp4)
-
-### منتصف الصفحة — Mid page
-
-<video src="https://raw.githubusercontent.com/wilo101/mindloop/main/docs/videos/home-mid.mp4" controls playsinline muted width="100%"></video>
-
-[فتح الفيديو](./docs/videos/home-mid.mp4)
-
-### الفوتر — Footer
-
-<video src="https://raw.githubusercontent.com/wilo101/mindloop/main/docs/videos/footer.mp4" controls playsinline muted width="100%"></video>
-
-[فتح الفيديو](./docs/videos/footer.mp4)
-
----
-
-## Screenshots
+على GitHub الـ **GIF** يظهر ويتحرك **تلقائياً** من غير أيقونة مكسورة ولا ضغط Play. المعاينات أدناه مولَّدة من نفس تسجيلات الشاشة (~6 ثوانٍ كل واحد، عرض 680px للحجم).
 
 ### Hero (full viewport)
 
-![Hero](./docs/hero.png)
+![Hero — animated preview](./docs/hero.gif)
 
-The hero anchors the brand with a **cinematic video field**, a soft bottom fade into the page background, and a **single focal column** (social proof row → headline → body → glass subscribe bar). Motion is staggered `fadeUp` so the eye reads top-to-bottom without competing animations. *Capture tip: export a still from the start of your scroll recording (hero section).*
+الهيرو يثبّت البراند بـ **فيديو بملء الشاشة**، تلاشي سفلي ناعم، وعمود واحد للعين (صف اشتراك زجاجي، وحِركة `fadeUp` متتابعة).
 
 ### Mid-page (search + narrative band)
 
-![Mid page](./docs/home-mid.png)
+![Mid page — animated preview](./docs/home-mid.gif)
 
-Below the fold, the layout shifts to **editorial rhythm**: a strong H2, three equal-width tiles on a grid, then the scroll-linked mission block. Spacing tightens intentionally so the mission video square reads as a **pause** before the word-by-word scroll interpolation. *Match to the middle section of your home recording.*
+إيقاع تحريري: عنوان قوي، شبكة من ثلاث بلاطات، ثم بلوك المهمة مع تمرير مرتبط بالسكرول.
 
 ### Footer / closing CTA band
 
-![Footer & CTA](./docs/footer-cta.png)
+![Footer & CTA — animated preview](./docs/footer-cta.gif)
 
-The shared **CTA** closes many routes: full-bleed stream, semi-opaque scrim, and paired primary/secondary buttons with the same hover scale as the hero. The **footer** is minimal—legal tone, border-only separation—so the CTA remains the last visual beat. *Match to the footer segment of your recording.*
+شريط **CTA** مشترك بفيديو بملء الخلفية، أزرار أولية/ثانوية، وفوتر بسيط يفصل بنبرة قانونية.
+
+---
+
+## فيديوهات MP4 (جودة أعلى — تشغيل يدوي)
+
+الملفات الكاملة في [`docs/videos/`](./docs/videos/) — مناسبة لو عايز دقة أعلى من الـ GIF:
+
+| مقطع | ملف |
+|------|-----|
+| الهيرو | [hero.mp4](./docs/videos/hero.mp4) |
+| منتصف الصفحة | [home-mid.mp4](./docs/videos/home-mid.mp4) |
+| الفوتر | [footer.mp4](./docs/videos/footer.mp4) |
 
 ---
 
@@ -86,6 +73,9 @@ src/
 public/
 scripts/
   copy-spa-fallback.mjs   # index.html → 404.html for GitHub Pages
+docs/
+  *.gif                   # README previews (autoplay on GitHub)
+  videos/                 # full MP4 recordings
 .github/workflows/
   deploy.yml
 ```
@@ -111,14 +101,10 @@ MIT. See [LICENSE](./LICENSE).
 
 ---
 
-### Before you publish
-
-1. Add real screenshots: save `screenshot.png` at the repo root and place section shots under `docs/` (see paths above). Your recordings map cleanly to **hero / mid / footer** for still exports.
-2. Replace the **Live** link in this file after GitHub Pages is enabled for the `gh-pages` branch (or adjust the workflow if you use the official Actions source).
-3. Local production check (PowerShell):
+### Local production check (PowerShell)
 
 ```powershell
-$env:GITHUB_PAGES="true"; $env:GH_REPO_NAME="your-repo-slug"; npm run build
+$env:GITHUB_PAGES="true"; $env:GH_REPO_NAME="mindloop"; npm run build
 ```
 
-Confirm asset paths in `dist/index.html` use `/your-repo-slug/...` then push to `main` or `master`.
+Confirm asset paths in `dist/index.html` use `/mindloop/...` ثم ادفع إلى `main`.
