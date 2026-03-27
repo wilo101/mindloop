@@ -12,8 +12,6 @@
 
 [**Live site**](https://wilo101.github.io/mindloop/) · [**Source**](https://github.com/wilo101/mindloop)
 
-<sub>Enable GitHub Pages from the `gh-pages` branch after the deploy workflow succeeds.</sub>
-
 </div>
 
 ---
@@ -104,15 +102,3 @@ screenshot.png
 ## License
 
 MIT — see [LICENSE](./LICENSE).
-
----
-
-<div align="center">
-
-<sub>Production check (GitHub Pages base path):</sub>
-
-```powershell
-$env:GITHUB_PAGES="true"; $env:GH_REPO_NAME="mindloop"; npm run build
-```
-
-</div>
