@@ -10,7 +10,10 @@ Mindloop is a **front-end concept**: a dark, monochrome marketing site for a new
 
 ## Screen recordings / تسجيلات الشاشة
 
-مسجّلات قصيرة من الواجهة (تعمل مباشرة في README على GitHub):
+الملفات نفسها في المشروع تحت [`docs/videos/`](./docs/videos/) وعلى GitHub:  
+[github.com/wilo101/mindloop/tree/main/docs/videos](https://github.com/wilo101/mindloop/tree/main/docs/videos)
+
+مسجّلات قصيرة من الواجهة — لو المشغّل ما ظهرش في الصفحة، اضغط رابط **فتح الفيديو** تحت كل مقطع:
 
 ### الهيرو — Hero
 
