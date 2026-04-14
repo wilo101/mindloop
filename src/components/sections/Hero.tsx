@@ -3,64 +3,49 @@ import { fadeUp } from "../../lib/animations";
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen flex flex-col justify-center overflow-hidden">
+    <section className="relative flex min-h-screen flex-col justify-center overflow-hidden">
       <video
         autoPlay
         loop
         muted
         playsInline
-        className="absolute inset-0 w-full h-full object-cover z-0"
+        className="absolute inset-0 z-0 h-full w-full object-cover"
         src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260325_120549_0cd82c36-56b3-4dd9-b190-069cfc3a623f.mp4"
       />
-      <div className="absolute bottom-0 left-0 right-0 h-64 bg-gradient-to-t from-background to-transparent z-[1]" />
+      <div className="overlay-scrim absolute inset-0 z-[1]" />
+      <div className="absolute inset-0 z-[2] bg-black/20" />
 
-      <div className="relative z-10 flex flex-col items-center text-center px-6 pt-28 md:pt-32 max-w-5xl mx-auto">
-        <motion.div {...fadeUp(0.1)} className="flex items-center gap-4 mb-8">
-          <div className="flex -space-x-2">
-            <img
-              src="https://picsum.photos/seed/avatar1/100/100"
-              alt="Decorative avatar stack, first"
-              className="w-8 h-8 rounded-full border-2 border-background object-cover"
-            />
-            <img
-              src="https://picsum.photos/seed/avatar2/100/100"
-              alt="Decorative avatar stack, second"
-              className="w-8 h-8 rounded-full border-2 border-background object-cover"
-            />
-            <img
-              src="https://picsum.photos/seed/avatar3/100/100"
-              alt="Decorative avatar stack, third"
-              className="w-8 h-8 rounded-full border-2 border-background object-cover"
-            />
-          </div>
-          <span className="text-muted-foreground text-sm">Newsletter signup — UI concept (no live list)</span>
-        </motion.div>
-
-        <motion.h1 {...fadeUp(0.2)} className="text-5xl md:text-7xl lg:text-8xl font-medium tracking-[-2px] mb-6">
-          Get <span className="font-serif italic font-normal">Inspired</span> with Us
-        </motion.h1>
-
-        <motion.p {...fadeUp(0.3)} className="text-lg text-hero-subtitle max-w-2xl mb-12">
-          Join our feed for meaningful updates, news around technology and a shared journey toward depth and direction.
+      <div className="relative z-10 mx-auto flex max-w-5xl flex-col items-center px-6 pb-16 pt-28 text-center md:pt-32">
+        <motion.p {...fadeUp(0.1)} className="text-micro mb-8 text-[rgba(240,240,250,0.65)]">
+          NEWSLETTER · UI CONCEPT (NO LIVE LIST)
         </motion.p>
 
-        <motion.div {...fadeUp(0.4)} className="w-full max-w-lg">
-          <form className="liquid-glass rounded-full p-2 flex items-center gap-2">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="flex-1 bg-transparent border-none outline-none px-6 text-foreground placeholder:text-muted-foreground"
-              required
-            />
-            <motion.button
-              whileHover={{ scale: 1.03 }}
-              whileTap={{ scale: 0.98 }}
-              type="button"
-              className="bg-foreground text-background rounded-full px-8 py-3 font-medium text-sm"
-            >
-              SUBSCRIBE
-            </motion.button>
-          </form>
+        <motion.h1 {...fadeUp(0.2)} className="text-display-hero mb-8 max-w-4xl">
+          GET INSPIRED WITH US
+        </motion.h1>
+
+        <motion.p {...fadeUp(0.3)} className="text-caption mb-12 max-w-2xl text-[rgba(240,240,250,0.85)]">
+          Join our feed for meaningful updates, news around technology, and a shared journey toward depth and direction.
+        </motion.p>
+
+        <motion.div
+          {...fadeUp(0.4)}
+          className="flex w-full max-w-lg flex-col overflow-hidden rounded-[32px] border border-[rgba(240,240,250,0.35)] bg-[rgba(240,240,250,0.06)] sm:flex-row"
+        >
+          <input
+            type="email"
+            placeholder="ENTER YOUR EMAIL"
+            className="min-w-0 flex-1 border-none bg-transparent px-5 py-4 text-caption text-[#f0f0fa] outline-none placeholder:text-[rgba(240,240,250,0.45)]"
+            required
+          />
+          <motion.button
+            whileHover={{ scale: 1.01 }}
+            whileTap={{ scale: 0.99 }}
+            type="button"
+            className="text-nav-bold border-t border-[rgba(240,240,250,0.35)] bg-[rgba(240,240,250,0.1)] px-8 py-4 text-[#f0f0fa] transition-colors hover:bg-[rgba(240,240,250,0.18)] hover:text-white sm:border-l sm:border-t-0"
+          >
+            SUBSCRIBE
+          </motion.button>
         </motion.div>
       </div>
     </section>

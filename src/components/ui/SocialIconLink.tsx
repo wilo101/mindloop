@@ -10,13 +10,13 @@ export interface SocialIconLinkProps {
 export function SocialIconLink({ href, label, icon: Icon }: SocialIconLinkProps) {
   return (
     <motion.a
-      whileHover={{ scale: 1.05 }}
-      whileTap={{ scale: 0.95 }}
+      whileHover={{ scale: 1.04 }}
+      whileTap={{ scale: 0.98 }}
       href={href}
       aria-label={label}
-      className="liquid-glass w-10 h-10 rounded-full flex items-center justify-center text-foreground hover:text-foreground/80 transition-colors"
+      className="flex h-10 w-10 items-center justify-center rounded-[32px] border border-[rgba(240,240,250,0.35)] bg-[rgba(240,240,250,0.1)] text-[#f0f0fa] transition-colors hover:bg-[rgba(240,240,250,0.18)] hover:text-white"
     >
-      <Icon className="w-4 h-4" aria-hidden />
+      <Icon className="h-4 w-4" aria-hidden />
     </motion.a>
   );
 }

@@ -18,7 +18,7 @@
 
 ![Mindloop hero — full viewport landing](./screenshot.png)
 
-Mindloop is a **UI / UX–only study**: a multi-route marketing shell for a newsletter-minded product. The focus is **visual hierarchy**—serif/sans pairing, glass UI, full-bleed media, and scroll-driven motion—not a production backend. There are **no real subscriptions** or data layer; scope is explicit in the interface badge.
+Mindloop is a **UI / UX–only study**: a multi-route marketing shell for a newsletter-minded product. Visual language follows **[DESIGN.md](./DESIGN.md)** — a **SpaceX-inspired** system: **D-DIN** typography, spectral white (`#f0f0fa`) on pure black, **ghost** CTAs, full-viewport media, and no decorative chrome. There is **no production backend**; scope is explicit in the interface badge.
 
 ---
 
@@ -30,19 +30,19 @@ High-fidelity captures from the build. Each layout choice is meant to read as **
 
 ![Hero — cosmic landscape, typography, glass subscribe](./docs/readme-hero.png)
 
-**Design intent:** An immersive, surreal scene carries the brand so the hero never feels like a flat marketing strip. Center-locked copy, mixed **Instrument Serif** emphasis on *Inspired*, and a **liquid-glass** email bar keep attention on one column. The nav stays light (wordmark, anchors, social glyphs) so the landscape remains the hero.
+**Design intent:** Full-bleed video with a dark scrim; **uppercase D-DIN** display type and a **spectral** email field + ghost **SUBSCRIBE** split. Navigation stays transparent so the scene stays primary.
 
 ### Solution — platform narrative
 
 ![Solution — headline, centerpiece visual, four-column features](./docs/readme-solution.png)
 
-**Design intent:** A restrained **SOLUTION** kicker and a single large framed visual create breathing room before the grid. The headline splits **sans + italic serif** on *meaningful* to echo the hero. Four equal columns describe capability without cards-on-cards noise—typography and spacing do the structuring.
+**Design intent:** Micro-label **SOLUTION**, then a wide **cinematic** strip before a four-up feature grid—all **uppercase**, tracked, achromatic. No cards; structure comes from type and full-width footage.
 
 ### Closing CTA & footer
 
 ![CTA — Journey headline, dual buttons, footer](./docs/readme-cta-footer.png)
 
-**Design intent:** The closing band mirrors the hero’s drama with a metallic ribbon background and the same typographic rule (display sans + italic serif on *Journey*). **Primary / secondary** buttons are weighted differently but share radius and hover language. The footer stays quiet—copyright and legal links—so the CTA remains the last intentional beat.
+**Design intent:** Stream-backed full-height band with **dual ghost** actions and uppercase display title. Footer is minimal legal copy in **micro** uppercase—no competing panels.
 
 ---
 
@@ -52,7 +52,7 @@ High-fidelity captures from the build. Each layout choice is meant to read as **
 - **Routing:** React Router **v7** with `basename` from `import.meta.env.BASE_URL` for GitHub Pages  
 - **Motion:** staggered reveals and scroll-linked opacity on long-form text  
 - **Media:** ambient video in hero/solution; **HLS** in the CTA (`hls.js` + Safari fallback)  
-- **Styling:** Tailwind **v4**, dark monochrome system, consistent spacing scale  
+- **Styling:** Tailwind **v4** + **DESIGN.md** tokens (spectral / ghost / scrim)  
 - **Shipping:** CI to **`gh-pages`**, SPA **404** fallback for deep links  
 
 ---
@@ -72,6 +72,7 @@ src/
 ├── main.tsx
 ├── index.css
 └── vite-env.d.ts
+DESIGN.md              # SpaceX-inspired UI rules (getdesign)
 docs/
 ├── readme-hero.png
 ├── readme-solution.png
@@ -95,7 +96,7 @@ screenshot.png
 | Motion | **Motion** | One system for entrance timelines and scroll-scrubbed copy. |
 | Router | **React Router v7** | Client routes with a base path that matches the repo slug on Pages. |
 | Stream | **hls.js** | HLS where MSE exists; native HLS where the browser supports it. |
-| Icons | **lucide-react** | Crisp stroke icons aligned to the glass UI. |
+| Icons | **lucide-react** | Minimal glyphs inside **ghost** circular targets. |
 
 ---
 

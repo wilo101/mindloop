@@ -30,50 +30,33 @@ export function CTA() {
   }, []);
 
   return (
-    <section className="relative py-32 md:py-44 border-t border-border/30 overflow-hidden flex flex-col items-center justify-center min-h-[600px]">
+    <section className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden border-t border-[rgba(240,240,250,0.12)]">
       <video
         ref={videoRef}
         autoPlay
         loop
         muted
         playsInline
-        className="absolute inset-0 w-full h-full object-cover z-0"
+        className="absolute inset-0 z-0 h-full w-full object-cover"
       />
-      <div className="absolute inset-0 bg-background/45 z-[1]" />
+      <div className="absolute inset-0 z-[1] bg-black/50" />
 
-      <div className="relative z-10 flex flex-col items-center text-center px-6 max-w-2xl mx-auto">
-        <motion.div
-          {...fadeUp(0.1)}
-          className="relative flex items-center justify-center w-10 h-10 rounded-full border-2 border-foreground/60 mb-8"
-        >
-          <div className="w-5 h-5 rounded-full border border-foreground/60" />
-        </motion.div>
-
-        <motion.h2 {...fadeUp(0.2)} className="text-5xl md:text-7xl font-medium tracking-[-2px] mb-6">
-          Start Your <span className="font-serif italic font-normal">Journey</span>
+      <div className="relative z-10 mx-auto flex max-w-5xl flex-col items-center px-6 py-24 text-center">
+        <motion.h2 {...fadeUp(0.1)} className="text-display-hero mb-8 max-w-4xl">
+          START YOUR JOURNEY
         </motion.h2>
 
-        <motion.p {...fadeUp(0.3)} className="text-muted-foreground text-lg mb-10">
-          A full-bleed closing band: picture-in-copy over stream, glass buttons, and the same typographic scale as the
-          hero—built as a visual study, not a live product funnel.
+        <motion.p {...fadeUp(0.2)} className="text-caption mb-12 max-w-2xl text-[rgba(240,240,250,0.75)]">
+          A full-bleed closing band: stream-backed imagery, spectral type, and ghost CTAs — a visual study, not a live
+          product funnel.
         </motion.p>
 
-        <motion.div {...fadeUp(0.4)} className="flex flex-col sm:flex-row items-center gap-4">
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            type="button"
-            className="bg-foreground text-background rounded-lg px-8 py-3.5 font-medium text-sm w-full sm:w-auto"
-          >
-            Subscribe Now
+        <motion.div {...fadeUp(0.3)} className="flex w-full max-w-md flex-col items-center gap-4 sm:flex-row sm:justify-center">
+          <motion.button whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} type="button" className="btn-ghost w-full sm:w-auto">
+            SUBSCRIBE NOW
           </motion.button>
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            type="button"
-            className="liquid-glass rounded-lg px-8 py-3.5 font-medium text-sm w-full sm:w-auto"
-          >
-            Start Writing
+          <motion.button whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} type="button" className="btn-ghost w-full sm:w-auto">
+            START WRITING
           </motion.button>
         </motion.div>
       </div>
