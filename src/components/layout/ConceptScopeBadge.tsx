@@ -1,10 +1,10 @@
 export function ConceptScopeBadge() {
   return (
     <div
-      className="fixed bottom-4 left-4 z-[60] max-w-[min(100%-2rem,18rem)] rounded border border-[rgba(240,240,250,0.35)] bg-[rgba(0,0,0,0.5)] px-3 py-2 text-micro text-[rgba(240,240,250,0.85)] backdrop-blur-sm"
+      className="fixed bottom-4 left-4 z-[60] max-w-[min(100%-2rem,20rem)] rounded-full border border-[rgba(34,42,53,0.08)] bg-white px-4 py-2 text-caption-cal shadow-cal-card"
       role="status"
     >
-      FRONT-END CONCEPT · UI / UX ONLY
+      Front-end concept · UI / UX only
     </div>
   );
 }

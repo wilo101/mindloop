@@ -18,7 +18,7 @@
 
 ![Mindloop hero — full viewport landing](./screenshot.png)
 
-Mindloop is a **UI / UX–only study**: a multi-route marketing shell for a newsletter-minded product. Visual language follows **[DESIGN.md](./DESIGN.md)** — a **SpaceX-inspired** system: **D-DIN** typography, spectral white (`#f0f0fa`) on pure black, **ghost** CTAs, full-viewport media, and no decorative chrome. There is **no production backend**; scope is explicit in the interface badge.
+Mindloop is a **UI / UX–only study**: a multi-route marketing shell for a newsletter-minded product. Visual language follows **[DESIGN.md](./DESIGN.md)** — **Cal.com–inspired**: **Cal Sans** display, **Inter** body, charcoal (`#242424`) on white, **ring + soft** card shadows, and restrained grayscale chrome. There is **no production backend**; scope is explicit in the interface badge.
 
 ---
 
@@ -30,19 +30,19 @@ High-fidelity captures from the build. Each layout choice is meant to read as **
 
 ![Hero — cosmic landscape, typography, glass subscribe](./docs/readme-hero.png)
 
-**Design intent:** Full-bleed video with a dark scrim; **uppercase D-DIN** display type and a **spectral** email field + ghost **SUBSCRIBE** split. Navigation stays transparent so the scene stays primary.
+**Design intent:** Hero copy in **Cal Sans** over a white canvas; video sits in a **shadow card** (ring + soft elevation). Email field uses standard input chrome; primary CTA is **dark** (`#242424`) on white per Cal primary buttons.
 
 ### Solution — platform narrative
 
 ![Solution — headline, centerpiece visual, four-column features](./docs/readme-solution.png)
 
-**Design intent:** Micro-label **SOLUTION**, then a wide **cinematic** strip before a four-up feature grid—all **uppercase**, tracked, achromatic. No cards; structure comes from type and full-width footage.
+**Design intent:** Micro-label + **section title** in Cal Sans, full-width video in a **rounded shadow container**, then a four-column feature grid with Inter body—monochrome, no brand hue.
 
 ### Closing CTA & footer
 
 ![CTA — Journey headline, dual buttons, footer](./docs/readme-cta-footer.png)
 
-**Design intent:** Stream-backed full-height band with **dual ghost** actions and uppercase display title. Footer is minimal legal copy in **micro** uppercase—no competing panels.
+**Design intent:** Stream preview in an elevated card; **primary + secondary** buttons (dark + white/shadow). Footer stays minimal—Inter captions and legal links on white.
 
 ---
 
@@ -52,7 +52,7 @@ High-fidelity captures from the build. Each layout choice is meant to read as **
 - **Routing:** React Router **v7** with `basename` from `import.meta.env.BASE_URL` for GitHub Pages  
 - **Motion:** staggered reveals and scroll-linked opacity on long-form text  
 - **Media:** ambient video in hero/solution; **HLS** in the CTA (`hls.js` + Safari fallback)  
-- **Styling:** Tailwind **v4** + **DESIGN.md** tokens (spectral / ghost / scrim)  
+- **Styling:** Tailwind **v4** + **DESIGN.md** tokens (Cal Sans / Inter / shadow-card)  
 - **Shipping:** CI to **`gh-pages`**, SPA **404** fallback for deep links  
 
 ---
@@ -72,7 +72,7 @@ src/
 ├── main.tsx
 ├── index.css
 └── vite-env.d.ts
-DESIGN.md              # SpaceX-inspired UI rules (getdesign)
+DESIGN.md              # Cal.com–inspired UI rules (getdesign)
 docs/
 ├── readme-hero.png
 ├── readme-solution.png
@@ -96,7 +96,7 @@ screenshot.png
 | Motion | **Motion** | One system for entrance timelines and scroll-scrubbed copy. |
 | Router | **React Router v7** | Client routes with a base path that matches the repo slug on Pages. |
 | Stream | **hls.js** | HLS where MSE exists; native HLS where the browser supports it. |
-| Icons | **lucide-react** | Minimal glyphs inside **ghost** circular targets. |
+| Icons | **lucide-react** | Small stroke icons with soft elevation, grayscale. |
 
 ---
 

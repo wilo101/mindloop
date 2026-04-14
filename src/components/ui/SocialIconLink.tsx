@@ -14,7 +14,7 @@ export function SocialIconLink({ href, label, icon: Icon }: SocialIconLinkProps)
       whileTap={{ scale: 0.98 }}
       href={href}
       aria-label={label}
-      className="flex h-10 w-10 items-center justify-center rounded-[32px] border border-[rgba(240,240,250,0.35)] bg-[rgba(240,240,250,0.1)] text-[#f0f0fa] transition-colors hover:bg-[rgba(240,240,250,0.18)] hover:text-white"
+      className="flex h-9 w-9 items-center justify-center rounded-lg text-[#242424] shadow-cal-soft transition-opacity hover:opacity-70"
     >
       <Icon className="h-4 w-4" aria-hidden />
     </motion.a>

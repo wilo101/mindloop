@@ -4,10 +4,10 @@ import { cn } from "../../lib/utils";
 import { SocialIconLink } from "../ui/SocialIconLink";
 
 const LINKS = [
-  { label: "HOME", path: "/" },
-  { label: "HOW IT WORKS", path: "/how-it-works" },
-  { label: "PHILOSOPHY", path: "/philosophy" },
-  { label: "USE CASES", path: "/use-cases" },
+  { label: "Home", path: "/" },
+  { label: "How it works", path: "/how-it-works" },
+  { label: "Philosophy", path: "/philosophy" },
+  { label: "Use cases", path: "/use-cases" },
 ] as const;
 
 export function Navbar() {
@@ -15,21 +15,21 @@ export function Navbar() {
 
   return (
     <nav
-      className="fixed top-0 z-50 w-full px-6 md:px-16 lg:px-24 py-5 flex items-center justify-between bg-transparent"
+      className="sticky top-0 z-50 flex w-full items-center justify-between border-b border-transparent bg-white/95 px-6 py-4 shadow-nav backdrop-blur-sm md:px-12 lg:px-24"
       aria-label="Primary"
     >
-      <Link to="/" className="text-nav-bold text-[#f0f0fa] tracking-[1.17px] hover:text-white transition-colors">
-        MINDLOOP
+      <Link to="/" className="font-display text-lg font-semibold tracking-tight text-[#111111]">
+        Mindloop
       </Link>
 
-      <div className="hidden lg:flex items-center gap-10">
+      <div className="hidden items-center gap-10 lg:flex">
         {LINKS.map((item) => (
           <Link
             key={item.path}
             to={item.path}
             className={cn(
-              "text-nav-bold transition-colors",
-              pathname === item.path ? "text-[#f0f0fa]" : "text-[rgba(240,240,250,0.55)] hover:text-[#f0f0fa]",
+              "text-nav-link transition-opacity",
+              pathname === item.path ? "text-[#111111] opacity-100" : "text-[#111111]/70 hover:opacity-100",
             )}
           >
             {item.label}

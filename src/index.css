@@ -1,55 +1,53 @@
 @import "tailwindcss";
 @plugin "tailwindcss-animate";
 
-/* SpaceX-inspired tokens — see DESIGN.md */
+/* Cal.com-inspired tokens — see DESIGN.md */
 @theme {
-  --font-sans: "D-DIN", "DIN", Arial, Verdana, sans-serif;
-  --font-display: "D-DIN", "DIN", Arial, sans-serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Cal Sans", "Inter", ui-sans-serif, system-ui, sans-serif;
 
-  --color-spectral: #f0f0fa;
-  --color-space-black: #000000;
-
-  --color-background: #000000;
-  --color-foreground: #f0f0fa;
-  --color-card: #000000;
-  --color-card-foreground: #f0f0fa;
-  --color-primary: #f0f0fa;
-  --color-primary-foreground: #000000;
-  --color-secondary: rgba(240, 240, 250, 0.1);
-  --color-secondary-foreground: #f0f0fa;
-  --color-muted: rgba(240, 240, 250, 0.35);
-  --color-muted-foreground: rgba(240, 240, 250, 0.65);
-  --color-accent: rgba(240, 240, 250, 0.1);
-  --color-accent-foreground: #f0f0fa;
-  --color-border: rgba(240, 240, 250, 0.35);
-  --color-input: rgba(240, 240, 250, 0.15);
-  --color-ring: rgba(240, 240, 250, 0.35);
-  --color-hero-subtitle: rgba(240, 240, 250, 0.85);
+  --color-background: #ffffff;
+  --color-foreground: #242424;
+  --color-card: #ffffff;
+  --color-card-foreground: #242424;
+  --color-primary: #242424;
+  --color-primary-foreground: #ffffff;
+  --color-secondary: #f5f5f5;
+  --color-secondary-foreground: #242424;
+  --color-muted: #f5f5f5;
+  --color-muted-foreground: #898989;
+  --color-accent: #f5f5f5;
+  --color-accent-foreground: #111111;
+  --color-border: rgba(34, 42, 53, 0.1);
+  --color-input: #ffffff;
+  --color-ring: rgba(59, 130, 246, 0.5);
+  --color-link: #0099ff;
+  --color-hero-subtitle: #898989;
 }
 
 @layer base {
   :root {
-    --background: 0 0% 0%;
-    --foreground: 240 20% 98%;
-    --card: 0 0% 0%;
-    --card-foreground: 240 20% 98%;
-    --primary: 240 20% 98%;
-    --primary-foreground: 0 0% 0%;
-    --secondary: 240 20% 98%;
-    --secondary-foreground: 240 20% 98%;
-    --muted: 240 10% 40%;
-    --muted-foreground: 240 15% 70%;
-    --accent: 240 20% 98%;
-    --accent-foreground: 240 20% 98%;
-    --border: 240 15% 35%;
-    --input: 240 15% 20%;
-    --ring: 240 15% 35%;
-    --hero-subtitle: 240 15% 92%;
+    --background: 0 0% 100%;
+    --foreground: 0 0% 14%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 14%;
+    --primary: 0 0% 14%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 14%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 54%;
+    --accent: 0 0% 96%;
+    --accent-foreground: 0 0% 7%;
+    --border: 220 13% 91%;
+    --input: 0 0% 100%;
+    --ring: 217 91% 60%;
+    --hero-subtitle: 0 0% 54%;
   }
 
   body {
-    background-color: #000000;
-    color: #f0f0fa;
+    background-color: #ffffff;
+    color: #242424;
     font-family: var(--font-sans);
     font-feature-settings: "kern" 1;
     text-rendering: optimizeLegibility;
@@ -57,78 +55,124 @@
 }
 
 @layer utilities {
-  /* Ghost button — sole interactive surface per DESIGN.md */
-  .btn-ghost {
-    background: rgba(240, 240, 250, 0.1);
-    color: #f0f0fa;
-    padding: 18px;
-    border-radius: 32px;
-    border: 1px solid rgba(240, 240, 250, 0.35);
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    font-weight: 700;
-    font-size: 0.75rem;
-    line-height: 0.94;
-    transition: background-color 0.2s ease, color 0.2s ease;
-  }
-  .btn-ghost:hover {
-    background: rgba(240, 240, 250, 0.18);
-    color: #ffffff;
+  /* Level 2 card shadow from DESIGN.md */
+  .shadow-cal-card {
+    box-shadow:
+      rgba(19, 19, 22, 0.7) 0px 1px 5px -4px,
+      rgba(34, 42, 53, 0.08) 0px 0px 0px 1px,
+      rgba(34, 42, 53, 0.05) 0px 4px 8px 0px;
   }
 
-  .text-display-hero {
-    font-family: var(--font-display);
-    font-weight: 700;
-    font-size: clamp(2rem, 6vw, 3rem);
-    line-height: 1;
-    letter-spacing: 0.96px;
-    text-transform: uppercase;
-    color: #f0f0fa;
+  .shadow-cal-soft {
+    box-shadow: rgba(34, 42, 53, 0.05) 0px 4px 8px 0px;
   }
 
-  .text-nav-bold {
-    font-family: var(--font-display);
-    font-weight: 700;
-    font-size: 0.8125rem;
-    line-height: 0.94;
-    letter-spacing: 1.17px;
-    text-transform: uppercase;
-  }
-
-  .text-caption {
-    font-family: var(--font-display);
-    font-size: 0.75rem;
-    line-height: 1.5;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: rgba(240, 240, 250, 0.75);
-  }
-
-  .text-micro {
-    font-family: var(--font-display);
-    font-size: 0.625rem;
-    line-height: 0.94;
-    letter-spacing: 1px;
-    text-transform: uppercase;
+  .shadow-nav {
+    box-shadow: rgba(34, 42, 53, 0.06) 0px 1px 0px 0px;
   }
 
   .font-display {
     font-family: var(--font-display);
   }
 
-  .overlay-scrim {
-    background: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0.45) 0%,
-      rgba(0, 0, 0, 0.35) 40%,
-      rgba(0, 0, 0, 0.55) 100%
-    );
+  /* Display Hero — Cal Sans 600, tight */
+  .text-display-hero {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: clamp(2.25rem, 5vw, 4rem);
+    line-height: 1.1;
+    letter-spacing: 0;
+    color: #242424;
   }
 
-  /* Minimal glass row: spectral border only, no shadows */
-  .ghost-field {
-    border: 1px solid rgba(240, 240, 250, 0.35);
-    background: rgba(240, 240, 250, 0.06);
-    border-radius: 32px;
+  .text-section-title {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: clamp(1.875rem, 4vw, 3rem);
+    line-height: 1.1;
+    color: #242424;
+  }
+
+  .text-feature-title {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 1.3;
+    color: #242424;
+  }
+
+  .text-nav-link {
+    font-family: var(--font-sans);
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1.14;
+    color: #111111;
+  }
+
+  .text-body-muted {
+    font-family: var(--font-sans);
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #898989;
+  }
+
+  .text-caption-cal {
+    font-family: var(--font-sans);
+    font-weight: 500;
+    font-size: 0.75rem;
+    line-height: 1;
+    color: #898989;
+  }
+
+  .btn-cal-primary {
+    font-family: var(--font-sans);
+    font-weight: 600;
+    font-size: 0.875rem;
+    line-height: 1;
+    background-color: #242424;
+    color: #ffffff;
+    padding: 0.625rem 1.25rem;
+    border-radius: 0.5rem;
+    transition: opacity 0.2s ease;
+  }
+  .btn-cal-primary:hover {
+    opacity: 0.7;
+  }
+
+  .btn-cal-secondary {
+    font-family: var(--font-sans);
+    font-weight: 600;
+    font-size: 0.875rem;
+    line-height: 1;
+    background-color: #ffffff;
+    color: #242424;
+    padding: 0.625rem 1.25rem;
+    border-radius: 0.5rem;
+    box-shadow:
+      rgba(19, 19, 22, 0.7) 0px 1px 5px -4px,
+      rgba(34, 42, 53, 0.08) 0px 0px 0px 1px,
+      rgba(34, 42, 53, 0.05) 0px 4px 8px 0px;
+    transition: opacity 0.2s ease;
+  }
+  .btn-cal-secondary:hover {
+    opacity: 0.85;
+  }
+
+  .input-cal {
+    font-family: var(--font-sans);
+    font-size: 0.875rem;
+    border: 1px solid rgb(118, 118, 118);
+    border-radius: 0.5rem;
+    padding: 0.625rem 1rem;
+    color: #000000;
+    background: #ffffff;
+  }
+  .input-cal::placeholder {
+    color: #898989;
+  }
+  .input-cal:focus {
+    outline: 2px solid rgba(59, 130, 246, 0.5);
+    outline-offset: 0;
   }
 }

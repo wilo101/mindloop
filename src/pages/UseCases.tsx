@@ -5,26 +5,26 @@ import { CTA } from "../components";
 export function UseCases() {
   const cases = [
     {
-      title: "FOR WRITERS",
-      desc: "BUILD AN AUDIENCE THAT ACTUALLY READS YOUR WORK. NO SEO HACKING, NO CLICKBAIT TITLES. JUST YOUR IDEAS AND THE PEOPLE WHO VALUE THEM.",
+      title: "For writers",
+      desc: "Build an audience that actually reads your work. No SEO hacking, no clickbait titles. Just your ideas and the people who value them.",
     },
     {
-      title: "FOR RESEARCHERS",
-      desc: "CURATE HIGH-SIGNAL FEEDS OF PAPERS, ANALYSIS, AND EXPERT COMMENTARY WITHOUT THE DISTRACTION OF SOCIAL MEDIA.",
+      title: "For researchers",
+      desc: "Curate high-signal feeds of academic papers, industry analysis, and expert commentary without the distraction of social media.",
     },
     {
-      title: "FOR TEAMS",
-      desc: "SHARE INTERNAL NEWSLETTERS, UPDATES, AND STRATEGIC THINKING IN A DEDICATED, DISTRACTION-FREE ENVIRONMENT.",
+      title: "For teams",
+      desc: "Share internal newsletters, industry updates, and strategic thinking in a dedicated, distraction-free environment.",
     },
   ];
 
   return (
     <>
-      <section className="mx-auto flex min-h-[70vh] max-w-6xl flex-col justify-center px-6 pb-32 pt-44">
-        <motion.h1 {...fadeUp(0.1)} className="text-display-hero mb-8 text-center">
-          BUILT FOR DEPTH
+      <section className="mx-auto flex min-h-[70vh] max-w-6xl flex-col justify-center bg-white px-6 pb-24 pt-28">
+        <motion.h1 {...fadeUp(0.1)} className="text-section-title mb-8 text-center">
+          Built for depth
         </motion.h1>
-        <motion.p {...fadeUp(0.2)} className="text-caption mx-auto mb-24 max-w-2xl text-center text-[rgba(240,240,250,0.75)]">
+        <motion.p {...fadeUp(0.12)} className="text-body-muted mx-auto mb-20 max-w-2xl text-center">
           Whether you&apos;re creating or consuming, Mindloop adapts to your intellectual workflow.
         </motion.p>
 
@@ -32,11 +32,11 @@ export function UseCases() {
           {cases.map((c, i) => (
             <motion.div
               key={c.title}
-              {...fadeUp(0.3 + i * 0.1)}
-              className="border border-[rgba(240,240,250,0.2)] bg-[rgba(240,240,250,0.04)] px-8 py-10"
+              {...fadeUp(0.15 + i * 0.08)}
+              className="rounded-2xl bg-white p-8 shadow-cal-card"
             >
-              <h2 className="text-nav-bold mb-4 text-[#f0f0fa]">{c.title}</h2>
-              <p className="text-micro leading-relaxed text-[rgba(240,240,250,0.55)]">{c.desc}</p>
+              <h2 className="font-display mb-4 text-xl font-semibold text-[#242424]">{c.title}</h2>
+              <p className="text-sm font-light leading-relaxed text-[#898989]">{c.desc}</p>
             </motion.div>
           ))}
         </div>

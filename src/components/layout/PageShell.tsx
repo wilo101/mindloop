@@ -6,7 +6,7 @@ export interface PageShellProps {
 
 export function PageShell({ children }: PageShellProps) {
   return (
-    <main className="min-h-screen bg-background text-foreground selection:bg-foreground selection:text-background overflow-x-hidden">
+    <main className="min-h-screen overflow-x-hidden bg-white text-[#242424] selection:bg-[#242424] selection:text-white">
       {children}
     </main>
   );
